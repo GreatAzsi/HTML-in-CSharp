@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tag Reader Test Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .card { border: 1px solid #ccc; padding: 16px; border-radius: 8px; margin-bottom: 16px; }
+    .highlight { color: red; }
+    .muted { color: gray; font-size: 14px; }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+ 
+    <h1 id="main-title">Tag Reader Test Page</h1>
+    <p class="muted">This file is for testing a C# HTML/XML tag reader.</p>
+ 
+    <!-- Basic headings -->
+    <h2>Section One</h2>
+    <h3>Subsection A</h3>
+    <h4>Deep heading</h4>
+ 
+    <!-- Paragraphs and spans -->
+    <p>This is a normal paragraph with some <span class="highlight">highlighted text</span> inside it.</p>
+    <p>Another paragraph with a <span id="inline-note" class="muted">muted inline span</span> and plain text.</p>
+ 
+    <!-- Div nesting -->
+    <div class="card" id="card-one">
+      <h2>Card One</h2>
+      <p>Content inside a card div. Nested <span>span inside a paragraph inside a div</span>.</p>
+      <div class="inner">
+        <p>A deeper nested paragraph.</p>
+        <span class="muted">A span at depth 3.</span>
+      </div>
+    </div>
+ 
+    <div class="card" id="card-two">
+      <h2>Card Two</h2>
+      <p class="highlight">A highlighted paragraph inside the second card.</p>
+    </div>
+ 
+    <!-- Lists -->
+    <h2>Lists</h2>
+    <ul id="fruit-list">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li class="highlight">Cherry</li>
+    </ul>
+ 
+    <ol>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+ 
+    <!-- Table -->
+    <h2>Table</h2>
+    <table id="data-table" border="1" cellpadding="8">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>30</td>
+          <td>Budapest</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>25</td>
+          <td>Vienna</td>
+        </tr>
+        <tr class="highlight">
+          <td>Carol</td>
+          <td>28</td>
+          <td>Prague</td>
+        </tr>
+      </tbody>
+    </table>
+ 
+    <!-- Form elements -->
+    <h2>Form</h2>
+    <form id="test-form" action="#" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" />
+ 
+      <br /><br />
+ 
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" />
+ 
+      <br /><br />
+ 
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" rows="3" cols="40">Default bio text here.</textarea>
+ 
+      <br /><br />
+ 
+      <label>
+        <input type="checkbox" name="agree" value="yes" /> I agree to the terms
+      </label>
+ 
+      <br /><br />
+ 
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+ 
+    <!-- Links and images -->
+    <h2>Links and Media</h2>
+    <p>Visit <a href="https://example.com" target="_blank" rel="noopener">example.com</a> for more info.</p>
+    <img src="placeholder.png" alt="A placeholder image" width="200" height="150" />
+ 
+    <!-- Self-closing and void elements -->
+    <h2>Misc Tags</h2>
+    <p>Line break below:</p>
+    <br />
+    <hr />
+    <p>After the horizontal rule. <strong>Bold text.</strong> <em>Italic text.</em> <code>inline code</code>.</p>
+ 
+    <!-- Data attributes -->
+    <div id="data-div" data-user-id="42" data-role="admin" class="card">
+      <p>This div has custom data attributes.</p>
+    </div>
+ 
+    <!-- Empty tags -->
+    <div id="empty-div" class="card"></div>
+    <span id="empty-span"></span>
+ 
+  </div><!-- end .container -->
+ 
+</body>
+</html>
