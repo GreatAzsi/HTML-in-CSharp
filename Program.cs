@@ -4,10 +4,10 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        List<CSharp> list = FileManager.FileReader("test.html");
+        List<CSharp> list = FileManager.FileReader("index2.html");
         foreach (CSharp item in list)
         {
-            Console.WriteLine($"Tag: {item.tag}, Content: {item.content}");
+            Console.WriteLine(item);
         }
     }
 }

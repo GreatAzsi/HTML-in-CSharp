@@ -15,5 +15,9 @@ namespace HTML
             this.tag = tag;
             this.content = content;
         }
+        public override string ToString()
+        {
+            return $"Tag: {tag}, Content: {content}";
+        }
     }
 }
