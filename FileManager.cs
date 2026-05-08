@@ -41,7 +41,7 @@ namespace HTML
                                 if (splitsplitline.Length == 1)
                                 {
                                     string tagtype = splitsplitline[0];
-                                    string content = null;
+                                    string content = "";
                                     if (!tagtype.StartsWith("/"))
                                     {
                                         list.Add(new CSharp(tagtype, content));
